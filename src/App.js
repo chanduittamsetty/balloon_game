@@ -1,11 +1,10 @@
 import './App.css';
-import { BallonGroup } from './Components/BallonGroup';
+import { BalloonGame } from './Components/Balloongame';
 
 function App() {
   return (
     <div className="App">
-      {/* component */}
-      <BallonGroup/>
+      <BalloonGame/>
     </div>
   );
 }

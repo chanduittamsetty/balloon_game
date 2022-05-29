@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export const BallonGroup = () => {
+export const BalloonGame = () => {
     //*state to store balloons shooted 
     let [shooted,setShooted]=useState([]);
     //*state to initilize and store five cicrle backgroud colors
@@ -42,12 +42,12 @@ export const BallonGroup = () => {
     return (
         <div style= {{display: "flex", justifyContent: "space-around", marginTop: "25px"}}>
             <div className="empty_div" style={{border: "1px solid red", width: "38%", height: "400px", display: "flex", flexWrap: "wrap"}}>
-                {shooted.map((item)=>{return <div key={item.color} onClick={()=>removeballoon(item)} style={{backgroundColor: "#" + item.color, height: "100px", width: "100px", border: "1px solid black", borderRadius: "50px"}}></div>})}
+                {shooted.map((item)=>{return <div key={item.color} onClick={()=>removeballoon(item)} style={{backgroundColor: "#" + item.color, height: "100px", width: "100px", border: "1px solid black", borderRadius: "50px",marginRight:"10px"}}></div>})}
             </div>
             <div className="balloons_div" style={{display: "flex", flexDirection: "column"}}>
                 {color_balloons.map((random)=>
                     <div id={random.id} key ={random.color}>
-                    <div   style={{backgroundColor: "#" + random.color, height: "100px", width: "100px", border: "1px solid black", borderRadius: "50px"}} ></div>
+                    <div   style={{backgroundColor: "#" + random.color, height: "100px", width: "100px", border: "1px solid black", borderRadius: "50px",marginBottom:"10px"}} ></div>
                 </div>)}
             </div>
             <div className='shoot_div'>
